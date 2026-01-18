@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH Assignment 2</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+  <header class="bg-[#1A0B2E] text-white px-6 py-5 sticky top-0 z-50">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between relative">
+        
+        <a href="#" class="group text-3xl font-bold tracking-tight cursor-pointer">
+            <span class="transition-colors duration-300 group-hover:text-gray-300">Tech</span><span class="bg-gradient-to-r from-[#FF8A48] via-[#FF4B91] to-[#A336FF] bg-clip-text text-transparent transition-opacity duration-300 group-hover:opacity-80">Wave</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-10 text-gray-300 font-medium">
+            <a href="#" class="hover:text-white transition-colors duration-300">About</a>
+            <a href="#" class="hover:text-white transition-colors duration-300">Episodes</a>
+            <a href="#" class="hover:text-white transition-colors duration-300">Host</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <button class="hidden sm:flex items-center gap-2 bg-gradient-to-r from-[#F9D423] via-[#FF4B91] to-[#736EFE] px-7 py-2.5 rounded-full font-bold text-white cursor-pointer hover:brightness-110 hover:scale-105 transition-all duration-300">
+                Subscribe 
+                <span class="text-lg">→</span>
+            </button>
+
+            <input type="checkbox" id="menu-toggle" class="peer hidden">
+
+            <label for="menu-toggle" class="md:hidden cursor-pointer p-2 z-50 active:scale-90 transition-transform">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </label>
+
+            <div class="absolute top-full left-0 w-full bg-[#160A25] flex-col items-start gap-4 p-6 border-t border-gray-800 
+                        hidden peer-checked:flex md:peer-checked:hidden shadow-2xl">
+                <a href="#" class="text-lg text-gray-300 hover:text-white w-full transition-colors">About</a>
+                <a href="#" class="text-lg text-gray-300 hover:text-white w-full border-t border-gray-700/50 pt-4 transition-colors">Episodes</a>
+                <a href="#" class="text-lg text-gray-300 hover:text-white w-full border-t border-gray-700/50 pt-4 transition-colors">Host</a>
+                <button class="sm:hidden w-full bg-gradient-to-r from-[#F9D423] via-[#FF4B91] to-[#736EFE] py-3 rounded-xl font-bold mt-2">
+                    Subscribe →
+                </button>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <main>
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
