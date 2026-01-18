@@ -1,58 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-[#01010D]">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PH Assignment 2</title>
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>TechWave Podcast</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-  <header class="bg-[#1A0B2E] text-white px-6 py-5 sticky top-0 z-50">
-    <nav class="max-w-7xl mx-auto flex items-center justify-between relative">
-        
-        <a href="#" class="group text-3xl font-bold tracking-tight cursor-pointer">
-            <span class="transition-colors duration-300 group-hover:text-gray-300">Tech</span><span class="bg-gradient-to-r from-[#FF8A48] via-[#FF4B91] to-[#A336FF] bg-clip-text text-transparent transition-opacity duration-300 group-hover:opacity-80">Wave</span>
-        </a>
+<body class="bg-[#01010D] text-white antialiased">
 
-        <div class="hidden md:flex items-center gap-10 text-gray-300 font-medium">
-            <a href="#" class="hover:text-white transition-colors duration-300">About</a>
-            <a href="#" class="hover:text-white transition-colors duration-300">Episodes</a>
-            <a href="#" class="hover:text-white transition-colors duration-300">Host</a>
+    <header class="bg-[#01010D]/80 backdrop-blur-md sticky top-0 z-50 px-6 py-5">
+        <nav class="max-w-7xl mx-auto flex items-center justify-between relative">
+            <a href="#" class="group text-3xl font-bold tracking-tight">
+                Tech<span class="bg-gradient-to-r from-[#FFD33D] via-[#FF4B91] to-[#A336FF] bg-clip-text text-transparent transition-opacity group-hover:opacity-80">Wave</span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-10 text-gray-300 font-medium">
+                <a href="#" class="hover:text-white transition-colors">About</a>
+                <a href="#" class="hover:text-white transition-colors">Episodes</a>
+                <a href="#" class="hover:text-white transition-colors">Host</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button class="hidden sm:flex items-center gap-2 bg-gradient-to-r from-[#FFD33D] via-[#FF4B91] to-[#A336FF] px-7 py-2.5 rounded-full font-bold text-white hover:brightness-110 transition-all cursor-pointer">
+                    Subscribe <span>→</span>
+                </button>
+
+                <input type="checkbox" id="menu-toggle" class="peer hidden">
+                <label for="menu-toggle" class="md:hidden cursor-pointer p-2 z-50">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </label>
+
+                <div class="absolute top-full left-0 w-full bg-[#0F0817] flex-col gap-4 p-6 hidden peer-checked:flex md:hidden border-t border-gray-800 shadow-2xl">
+                    <a href="#" class="text-lg hover:text-purple-400">About</a>
+                    <a href="#" class="text-lg hover:text-purple-400">Episodes</a>
+                    <a href="#" class="text-lg hover:text-purple-400">Host</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+   <main>
+    <section class="relative min-h-[90vh] bg-[#01010D] flex flex-col items-center justify-center text-center px-6 overflow-hidden">
+        
+        <div class="absolute inset-0 z-0">
+            <img src="/B13-A02-TechWave-main/assets/hero-bg.png" 
+                 class="w-full h-full object-cover opacity-60">
+            
+            <div class="absolute inset-0 bg-[#01010D]/20"></div>
         </div>
 
-        <div class="flex items-center gap-4">
-            <button class="hidden sm:flex items-center gap-2 bg-gradient-to-r from-[#F9D423] via-[#FF4B91] to-[#736EFE] px-7 py-2.5 rounded-full font-bold text-white cursor-pointer hover:brightness-110 hover:scale-105 transition-all duration-300">
-                Subscribe 
-                <span class="text-lg">→</span>
-            </button>
+        <div class="relative z-10 flex flex-col items-center max-w-4xl">
+            
+            <div class="relative mb-12">
+                <div class="w-56 h-56 md:w-72 md:h-72 rounded-full bg-gradient-to-tr from-[#FFD33D] via-[#FF4B91] to-[#A336FF] flex items-center justify-center shadow-[0_0_60px_rgba(255,75,145,0.4)]">
+                    <img src="/B13-A02-TechWave-main/assets/microphone.png" class="w-28 md:w-36 h-auto object-contain">
+                </div>
+                
+                <div class="absolute top-6 right-6 bg-[#57FF9A] text-[#01010D] text-xs font-black px-4 py-1.5 rounded-full shadow-[0_0_20px_rgba(87,255,154,0.5)]">
+                    NEW
+                </div>
+            </div>
 
-            <input type="checkbox" id="menu-toggle" class="peer hidden">
+            <h1 class="text-white text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
+                TechWave
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl mb-12 max-w-xl leading-relaxed">
+                Your daily dose of tech insights, productivity hacks, and personal growth.
+            </p>
 
-            <label for="menu-toggle" class="md:hidden cursor-pointer p-2 z-50 active:scale-90 transition-transform">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </label>
+            <div class="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto">
+                <button class="w-full sm:w-auto flex items-center justify-center gap-3 bg-gradient-to-r from-[#FFD33D] via-[#FF4B91] to-[#A336FF] px-10 py-4 rounded-full text-white font-bold hover:scale-105 transition-all shadow-lg cursor-pointer">
+                    <img src="/B13-A02-TechWave-main/assets/spotify.png" class="w-6 h-6">
+                    Listen On Spotify
+                </button>
 
-            <div class="absolute top-full left-0 w-full bg-[#160A25] flex-col items-start gap-4 p-6 border-t border-gray-800 
-                        hidden peer-checked:flex md:peer-checked:hidden shadow-2xl">
-                <a href="#" class="text-lg text-gray-300 hover:text-white w-full transition-colors">About</a>
-                <a href="#" class="text-lg text-gray-300 hover:text-white w-full border-t border-gray-700/50 pt-4 transition-colors">Episodes</a>
-                <a href="#" class="text-lg text-gray-300 hover:text-white w-full border-t border-gray-700/50 pt-4 transition-colors">Host</a>
-                <button class="sm:hidden w-full bg-gradient-to-r from-[#F9D423] via-[#FF4B91] to-[#736EFE] py-3 rounded-xl font-bold mt-2">
-                    Subscribe →
+                <button class="w-full sm:w-auto flex items-center justify-center gap-3 border-2 border-[#57FF9A]/40 px-10 py-4 rounded-full text-white font-bold hover:bg-[#57FF9A]/10 hover:border-[#57FF9A] transition-all cursor-pointer">
+                    <img src="/B13-A02-TechWave-main/assets/message.png" class="w-6 h-6">
+                    Subscribe
                 </button>
             </div>
         </div>
-    </nav>
-</header>
+    </section>
+</main>
 
-    <main>
-
-    </main>
-
-    <footer>
-
-    </footer>
 </body>
 </html>
