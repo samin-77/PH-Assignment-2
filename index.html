@@ -40,7 +40,7 @@
     </header>
 
    <main>
-   <section class="relative min-h-[85vh] min-[992px]:min-h-[90vh] bg-[#01010D] flex flex-col items-center justify-center text-center px-4 min-[576px]:px-6 overflow-hidden">
+  <section class="relative min-h-[85vh] min-[992px]:min-h-[90vh] bg-[#01010D] flex flex-col items-center justify-center text-center px-4 min-[576px]:px-6 overflow-hidden">
     
     <div class="absolute inset-0 z-0">
         <img src="./B13-A02-TechWave-main/assets/hero-bg.png" class="w-full h-full object-cover">
@@ -49,13 +49,16 @@
 
     <div class="relative z-10 flex flex-col items-center max-w-4xl">
         
-        <div class="relative mb-8 min-[576px]:mb-10 min-[992px]:mb-12 group cursor-pointer hover:animate-bounce transition-all duration-500">
+        <div class="relative mb-8 min-[576px]:mb-10 min-[992px]:mb-12">
             
-            <div class="w-48 h-48 min-[576px]:w-56 min-[576px]:h-56 min-[992px]:w-72 min-[992px]:h-72 rounded-full bg-gradient-to-tr from-[#FFD33D] via-[#FF4B91] to-[#A336FF] flex items-center justify-center shadow-[0_0_60px_rgba(255,75,145,0.4)]">
+            <div class="absolute inset-0 rounded-full bg-[#FF4B91]/40 animate-ripple-delayed-2"></div>
+            <div class="absolute inset-0 rounded-full bg-[#FF4B91]/60 animate-ripple-delayed-1"></div>
+            
+            <div class="relative w-48 h-48 min-[576px]:w-56 min-[576px]:h-56 min-[992px]:w-72 min-[992px]:h-72 rounded-full bg-gradient-to-tr from-[#FFD33D] via-[#FF4B91] to-[#A336FF] flex items-center justify-center z-10">
                 <img src="./B13-A02-TechWave-main/assets/microphone.png" class="w-24 min-[576px]:w-28 min-[992px]:w-36 h-auto object-contain">
             </div>
 
-            <div class="absolute top-4 right-4 min-[576px]:top-6 min-[576px]:right-6 bg-[#57FF9A] text-[#01010D] text-[10px] min-[576px]:text-xs font-black px-3 py-1 min-[576px]:px-4 min-[576px]:py-1.5 rounded-full shadow-[0_0_20px_rgba(87,255,154,0.5)]">
+            <div class="absolute top-4 right-4 min-[576px]:top-6 min-[576px]:right-6 bg-[#57FF9A] text-[#01010D] text-[10px] min-[576px]:text-xs font-black px-3 py-1 min-[576px]:px-4 min-[576px]:py-1.5 rounded-full shadow-[0_0_20px_rgba(87,255,154,0.5)] z-20">
                 NEW
             </div>
         </div>
@@ -80,6 +83,27 @@
         </div>
     </div>
 </section>
+
+<style>
+@keyframes ripple{
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+.animate-ripple-delayed-1{
+    animation: ripple 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+    animation-delay: 1s;
+}
+.animate-ripple-delayed-2{
+    animation: ripple 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+    animation-delay: 2s;
+}
+</style>
     <section class="bg-black py-16 lg:py-24 px-6">
         <div class="max-w-7xl mx-auto text-center">
             
